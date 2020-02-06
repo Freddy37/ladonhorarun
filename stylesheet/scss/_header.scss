@@ -1,0 +1,232 @@
+
+header{
+    max-width: 100%;
+    height: 4.2rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: $bodycolor;
+    
+}
+
+nav{
+    max-width: 98%;
+    height: 4.2rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 2.5rem;
+
+    .nav-brand{    
+        img{
+            width: 130px;
+            height: auto;
+        
+        }
+    }
+    //IF JS ADDS ACTIVE CLASS NAVBAR SHOWS UP
+    .active{
+        right: 0;
+    }
+    
+    //CLOSES NAVBAR
+    .close{
+        position: absolute;
+        top: 1rem;
+        left: 1.5rem;
+    }
+}
+
+//icons in navbar on mobiles
+.menu-icons i{
+    font-size: 2.2rem;
+    color: $basictext;
+    cursor:pointer;
+}
+
+.close i {
+    color: $green;
+} 
+
+//SCROLL LINE UNDER HEADER
+.scroll-line{
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background: $green;
+    width: 0%;
+}
+
+.nav-item {
+    margin: 1.5rem 0;
+    
+    .nav-link{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: rgba(0,0,0,.6);
+        transition: .2s;
+
+        &:hover:not(.disabled),
+        &:focus:not(.disabled){
+            color:$boldtext;
+        }
+    }
+}
+
+.nav-link:hover:not(.disabled),
+.nav-link:focus:not(.disabled){
+    color: rgb(0, 0, 0);
+}
+
+a.disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width:767px){
+    header{
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3.3rem;
+        width: 100%;
+        
+        nav{
+            padding: 0 .8rem;
+            height: 3.3rem;
+    
+           .nav-brand img{
+                width: 100px;
+                margin-left: -10px;
+            }
+            
+        }
+    }
+
+    .nav-list{
+        width: 13rem;
+        height: 100vh;
+        background-color: $bodycolor;
+        position: fixed;
+        top: 0;
+        right: -26rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1500;
+        -webkit-transition: -webkit-all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+.nav-item{
+    .nav-link{
+        font-size: 1.2rem ;
+    }
+}
+
+.scroll-line{
+    display: none;
+}
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+nav{
+    padding: 0 1rem;
+}
+
+
+.nav-brand img{
+    width: 100px;
+    height: auto;
+    
+}
+
+.nav-list{
+    width: 18rem;
+    height: 100vh;
+    background-color: $bodycolor;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    -webkit-transition: -webkit-all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item{
+.nav-link{
+    font-size: 1.6rem;
+    text-align: end;
+    margin: 0 1rem;
+}}
+
+.menu-icons i{
+    font-size: 2.5rem;
+}
+}
+
+@media screen and (min-width: 1024px){
+    nav{
+        padding: 0
+    }
+
+    .nav-brand{
+       
+       img{
+            opacity: 0.8;
+            transition: .2s ease-in-out;
+              
+        &:hover{
+                opacity: 1;
+            }
+        }
+    }
+
+
+
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        background-image: none;
+        position: initial;
+        top: initial;
+        right: initial;
+        display: flex;
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .nav-link{
+        font-size: 1.375rem;
+        margin: 0 1rem;
+    }
+
+    .menu-icons{
+        display:none;
+    }
+
+    .scroll-line{
+        height: 3px;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    nav{
+        max-width: 96%;
+    }
+}

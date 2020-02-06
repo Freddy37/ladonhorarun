@@ -1,0 +1,97 @@
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+    color: rgb(34, 100, 56);
+}
+
+a:hover, a:focus, a:active{
+    color: rgb(34, 100, 56);
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h3,p{
+    font-family: 'Bree Serif', serif;
+}
+
+
+.pozadie{
+    background: url(/img/freestockphotos-44901565676457ysug51ovg6.jpg) no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.pozadie h1{
+    font-size: 6rem;
+    text-align: center;
+    color: white;
+}
+
+.pozadie h3{
+    font-size: 3.5rem;
+    max-width: 1024px;
+    text-align: center;
+    margin: 2rem 0;
+    color: rgb(34, 100, 56);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.pozadie h1 span{
+    color: rgb(15, 202, 46);
+    border-bottom: 6px solid rgb(15, 202, 46);
+    display: inline-block;
+    line-height: 1.05;
+}
+
+.badmessage a{
+    color: white;
+}
+
+.pozadie a:not(.badmessage){
+    padding: 15px 30px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    color: green;
+    font-size: 20px;
+    margin-top: 2rem;
+    opacity: 0.9;
+}
+
+.pozadie a:hover{
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    
+}
+
+@media screen and (max-width: 768px){
+    .pozadie h3{
+        font-size: 2.5rem;
+        max-width: 80%;
+        text-align: center;
+        margin: 2rem 0;
+        color: rgb(34, 100, 56);
+        text-transform: uppercase;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}

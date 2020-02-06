@@ -1,0 +1,401 @@
+//==================================================================================================
+@media screen and (max-width: 767px){
+
+
+.pozadie h1{
+    text-align: center;
+    text-align: -webkit-center;
+    font-size: 3.5rem;
+}
+
+.movingarrow{
+    display: none;
+}
+
+.fa-angle-double-down{
+    color: $bodycolor;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 25px;
+    animation: animate 2s 5;   
+}    
+
+.pozadie{
+background: url(/img/wallmobile.jpg)no-repeat ;
+height: 100vh;
+background-size: cover;
+z-index: 1;
+}
+
+
+.obrazokpretek{
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+}
+
+.pretek{
+    margin: 2rem 0;
+    
+    .pretekylink{
+        font-size:1rem;
+        padding: 0.8rem;
+    }
+}
+
+.textpretek{
+    width: 85%;
+    
+    p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    
+    span{
+        font-size: 1.1rem;
+    }
+    
+    h3{
+        font-size: 1.6rem;
+    }
+    
+}
+
+
+.registraciacoskoro h1{
+    font-size: 1.5625rem;
+    letter-spacing: 1px;
+}
+
+.socialicon {
+    margin: 15px 20px;
+    width: 60px;
+    height: 60px;
+    
+    &::before {
+        font-size: 2.375rem;
+        line-height: 60px;
+    }
+}
+
+.socialmedias ul{
+    margin: 1rem 0;
+}
+
+.border{
+    margin: 30px auto;
+}
+
+.contact-section {
+    padding: 40px 0;
+    background: gray;
+    
+    .contact-form-text{
+        font-size: 1rem;
+    }
+    
+    .contact-form-btn{
+        font-size: 1rem;
+    }
+    
+    h1{
+        font-size: 1.8rem;
+    }
+}
+
+}
+
+
+@media screen and (max-width: 340px){
+    .socialicon {
+        margin: 15px 15px;
+    }
+}
+//==================================================================================================
+@media screen and (min-width: 768px) and (max-width:1023px){
+    
+    
+    .landingpage{
+        max-width: 100%;
+        
+        h1{
+            font-size: 5rem;
+            text-align: center;
+        }
+
+       a{
+          margin: 1.2rem 1.2rem;
+          font-size: 1.3rem;
+        }
+        p{
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+        }
+    }
+    
+
+    .pretek{
+        flex-direction: column;
+        margin: 6rem 0;
+    }
+
+    .textpretek{
+        max-width: 80%;
+        margin: 0 auto;
+        min-height: 25rem;
+
+            p{
+                font-size: 1.3rem;
+            }
+
+            span{
+                font-size: 1.4rem;
+            }
+    }
+
+    .obrazokpretek{
+        width: 100%;
+        margin: 0;
+    }
+
+    .registraciacoskoro h1{
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+    
+
+}
+
+
+//==================================================================================================
+@media screen and (min-width: 1024px){
+
+    .pozadie h1{
+        font-size: 6rem;
+    }
+
+    .landingpagelinks{
+        margin: 2rem 0 6rem;
+    }
+
+    .landingpagelinks a{
+        font-size: 1.2rem;
+        padding: .8rem 1.5rem;
+        outline: 2px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .infopodtitle p{
+        font-size: 1.1rem;
+    }
+
+    .pretek{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0;
+        min-height: 35rem;
+    }
+
+    .textpretek{
+        margin: 0 1.5rem 0 2rem;
+        width: 40vw;
+
+        p{
+            font-size: 1.15rem;
+        }
+
+        span{
+            font-size: 1.375rem;
+        }
+    }
+
+    .pretekylink{
+        margin: 1rem 0;
+    }
+
+
+
+    .obrazokpretek{
+        margin: 0 1rem 0 1.5rem;
+        width: 45vw;
+        max-width: 700px;
+    }
+
+    .registraciacoskoro h1{
+        font-size: 3.125rem;
+        letter-spacing: 1.5px;
+    }
+
+    #myBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 30px; /* Place the button at the bottom of the page */
+        right: 50px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        color: white; /* Text color */
+        opacity: 0.6;
+        background: transparent;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 10px; /* Rounded corners */
+        font-size: 1.125rem; /* Increase font size */
+
+        &:hover {
+  
+        opacity: 1;
+      }
+      }
+      
+
+      .socialicon:hover::after {
+        -webkit-transform: scale(0.85);
+        -moz-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+        transform: scale(0.85);
+        opacity: 0.5;
+    }
+    
+    .socialicon:hover {
+        box-shadow: 0 0 0 10px rgba(255,255,255,1);
+        background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+        color: $bodycolor;
+    }
+    
+    .fa-instagram:hover{
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+    
+    .fa-facebook:hover {
+        background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    }
+    
+
+}
+
+//==================================================================================================
+@media screen and (min-width: 1200px){
+
+    .pozadie h1{
+        font-size: 8rem;
+    }
+
+    .infopodtitle{
+        margin: 10px 0 25px;
+
+            p{
+                font-size: 1.2rem;
+                line-height: 22px;
+            }
+    }
+
+    .landingpagelinks a{
+        margin: 1.6rem 1.6rem;
+        padding: 1rem 2rem;
+    }
+
+    .pretek{
+        min-height: 40rem;
+    }
+    
+    .textpretek{
+        
+        h3{
+           font-size: 2.5rem;
+           margin-bottom: 1rem;
+       }
+
+       p,a{
+           margin: 1.5rem 0;
+           font-size: 1.25rem;
+       }
+       
+       span{
+           font-size: 1.3rem;
+       }
+    }
+  
+
+}
+
+//==================================================================================================
+    @media screen and (min-width: 1440px){
+
+    .infopodtitle p{
+        font-size: 1.5rem;
+        line-height: 1.625rem;
+    }
+
+    .textpretek{
+        position: absolute;
+        width: 30vw;
+        left: 10%;
+        margin-top: -1rem;
+        p {
+            font-size: 1.25rem;
+            margin: 1rem 0;
+        }
+    
+        span{
+            font-size: 1.375rem;
+        }
+    }
+
+    .landingpagelinks a{
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .firstp{
+        padding-top: 1rem;
+    }
+
+    .pretekylink{
+        font-size: 1.2rem;
+    }
+
+
+    .obrazokpretek{
+        position: absolute;
+        right: 6%;
+    }
+
+
+}
+
+//==================================================================================================
+@media screen and (min-width: 1920px){
+
+    .pozadie{
+        background-size: cover;
+    }
+    
+    .textpretek{
+        left: 14%;
+        margin-top: 0;
+
+            p{
+                margin: 2rem 0;
+                font-size: 1.375rem;
+            }
+                span{
+                font-size: 1.5rem;
+            }
+    }
+
+
+    .firstp{
+        padding-top: 0;
+    }
+
+
+    .obrazokpretek{
+        right: 10%;
+    }
+
+}
+
+

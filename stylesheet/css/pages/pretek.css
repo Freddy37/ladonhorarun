@@ -1,0 +1,544 @@
+/*BASIC*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Bree Serif", serif;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h3, p {
+  font-family: "Bree Serif", serif;
+}
+
+html, body {
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+input, textarea {
+  font-family: "Bree Serif", serif;
+}
+
+header {
+  max-width: 100%;
+  height: 4.2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: #fff;
+}
+
+nav {
+  max-width: 98%;
+  height: 4.2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2.5rem;
+}
+nav .nav-brand img {
+  width: 130px;
+  height: auto;
+}
+nav .active {
+  right: 0;
+}
+nav .close {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.menu-icons i {
+  font-size: 2.2rem;
+  color: #5c5c5c;
+  cursor: pointer;
+}
+
+.close i {
+  color: #238823;
+}
+
+.scroll-line {
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background: #238823;
+  width: 0%;
+}
+
+.nav-item {
+  margin: 1.5rem 0;
+}
+.nav-item .nav-link {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.2s;
+}
+.nav-item .nav-link:hover:not(.disabled), .nav-item .nav-link:focus:not(.disabled) {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-link:hover:not(.disabled),
+.nav-link:focus:not(.disabled) {
+  color: black;
+}
+
+a.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3.3rem;
+    width: 100%;
+  }
+  header nav {
+    padding: 0 0.8rem;
+    height: 3.3rem;
+  }
+  header nav .nav-brand img {
+    width: 100px;
+    margin-left: -10px;
+  }
+
+  .nav-list {
+    width: 13rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    -webkit-transition: -webkit-all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-item .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .scroll-line {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    padding: 0 1rem;
+  }
+
+  .nav-brand img {
+    width: 100px;
+    height: auto;
+  }
+
+  .nav-list {
+    width: 18rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    -webkit-transition: -webkit-all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-item .nav-link {
+    font-size: 1.6rem;
+    text-align: end;
+    margin: 0 1rem;
+  }
+
+  .menu-icons i {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    padding: 0;
+  }
+
+  .nav-brand img {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+  }
+  .nav-brand img:hover {
+    opacity: 1;
+  }
+
+  .nav-list {
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    background-image: none;
+    position: initial;
+    top: initial;
+    right: initial;
+    display: flex;
+    flex-direction: row;
+    transition: initial;
+  }
+
+  .nav-link {
+    font-size: 1.375rem;
+    margin: 0 1rem;
+  }
+
+  .menu-icons {
+    display: none;
+  }
+
+  .scroll-line {
+    height: 3px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  nav {
+    max-width: 96%;
+  }
+}
+/*Landing screen*/
+.fotkapodheader {
+  background: url(/img/fotka2.jpg) no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 100vh;
+  flex-direction: column;
+}
+.fotkapodheader h1 {
+  font-size: 6rem;
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.fotkapodheader span {
+  color: #238823;
+}
+
+.movingarrow {
+  display: flex;
+  justify-content: center;
+}
+.movingarrow a {
+  display: flex;
+  justify-content: center;
+}
+.movingarrow .fa-angle-double-down {
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  bottom: 30px;
+  animation: animate 2s 5;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*ARTICLE ------------------------------------------------------------*/
+article {
+  width: 85%;
+  margin: 2rem auto 4rem auto;
+}
+article a {
+  color: #238823;
+}
+article a:hover {
+  color: #2db12d;
+}
+article h3 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+article h1 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+article strong {
+  color: black;
+}
+article p {
+  color: #4f4f4f;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.trat {
+  margin: 2rem 0;
+}
+.trat h3 {
+  margin: 1rem 0;
+}
+.trat img {
+  position: relative;
+  top: 6px;
+  width: 30px;
+}
+.trat p {
+  text-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.1);
+}
+.trat .blue {
+  color: #1b37b1;
+}
+.trat .bluebold {
+  color: #1E3EC7;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.trat .red {
+  color: #D2222D;
+}
+.trat .yellow {
+  color: #FFDD00;
+}
+.trat .green {
+  color: #238823;
+}
+
+.bordermedzipretekmi {
+  width: 100%;
+  height: 3px;
+  border-radius: 20px;
+  background: #3d3d3d;
+  margin: 3rem auto;
+}
+
+/*footer*/
+footer {
+  height: 7rem;
+  width: 100%;
+  position: relative;
+  background: #3d3d3d;
+  bottom: 0;
+}
+
+.socialicons ul {
+  display: flex;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.socialicons li {
+  margin: 0 1rem;
+  text-align: center;
+}
+.socialicons i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.2s;
+}
+.socialicons i:hover {
+  color: #fff;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+#myBtn {
+  position: relative;
+  bottom: 500rem;
+}
+
+@media screen and (max-width: 767px) {
+  .fotkapodheader {
+    background: url(/img/fotka2mobil2.JPG) no-repeat;
+    height: 100vh;
+    background-size: cover;
+    z-index: 1;
+  }
+  .fotkapodheader .fa-angle-double-down {
+    color: #fff;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 25px;
+    animation: animate 2s 5;
+  }
+  .fotkapodheader h1 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  article h1 {
+    font-size: 1.6rem;
+  }
+  article h3 {
+    font-size: 1.4rem;
+  }
+  article p {
+    font-size: 1rem;
+  }
+
+  .trat {
+    margin: 2rem 0;
+  }
+  .trat h3 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .trat p {
+    text-align: justify;
+  }
+  .trat img {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bluebold {
+    font-size: 1.3rem;
+  }
+
+  .fotkapodheader h1 {
+    position: relative;
+    bottom: 5%;
+    width: 90%;
+    font-size: 4.5rem;
+  }
+
+  article {
+    width: 80%;
+    margin: 4rem auto 8rem auto;
+  }
+
+  footer {
+    height: 10rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+
+  .socialicons ul {
+    display: flex;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .socialicons li {
+    margin: 0 2.5rem;
+  }
+
+  .socialicons i {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .socialicons i:hover {
+    color: #fff;
+  }
+
+  #myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 30px;
+    /* Place the button at the bottom of the page */
+    right: 50px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    color: white;
+    /* Text color */
+    opacity: 0.6;
+    background: transparent;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+  }
+
+  #myBtn:hover {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .fotkapodheader h1 {
+    width: 80%;
+    font-size: 6rem;
+  }
+
+  article {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .socialicons li {
+    margin: 0 2.5rem;
+  }
+
+  .fotkapodheader {
+    background-size: cover;
+  }
+
+  .fotkapodheader h1 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .fotkapodheader h1 {
+    font-size: 2rem;
+  }
+
+  .fotkapodheader {
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=pretek.css.map */

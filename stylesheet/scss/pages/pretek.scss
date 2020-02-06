@@ -1,0 +1,364 @@
+@import '../vargeneral';
+@import '../header';
+
+
+
+
+/*Landing screen*/
+
+
+.fotkapodheader{
+    background: url(/img/fotka2.jpg) no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    height: 100vh;
+    flex-direction: column;
+    
+    h1{
+        font-size: 6rem;
+        width: 80%;
+        text-align: center;
+        color: $bodycolor;
+        text-transform: uppercase;
+        text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    span{
+    color: $green;
+}
+}
+
+
+
+.movingarrow{
+    display: flex;
+    justify-content: center;
+    
+    a{
+        display:flex;
+        justify-content: center;
+    }
+    
+    .fa-angle-double-down{
+        color: $bodycolor;
+        font-size: 40px;
+        position: absolute;
+        bottom: 30px;
+        animation: animate 2s 5;
+        
+    }
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: translate(0, -20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*ARTICLE ------------------------------------------------------------*/
+
+article{
+    width: 85%;
+    margin: 2rem auto 4rem auto;
+    
+    a{
+        color: $green;
+        
+        &:hover{
+           color: lighten($green, 10%);
+        }
+    }
+    
+    h3{
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+    
+    h1{
+        font-size: 2.5rem;
+        margin: 2rem 0;
+    }
+    
+    strong{
+        color: rgb(0, 0, 0);
+    }
+
+    p{
+        color: darken($basictext,5%);
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.trat{
+
+    margin:2rem 0;
+
+    h3{
+        margin: 1rem 0;
+    }
+    
+    img{
+        position: relative;
+        top: 6px;
+        width: 30px;
+    }
+    
+    p{
+        text-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.1);
+    }
+    //trat farby 
+    .blue{
+        color: darken($bluepath, 5%);
+    }
+    
+    .bluebold{
+        color: $bluepath;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    
+    .red{
+        color: $redpath;
+    }
+    
+    .yellow{
+        color: $yellowpath;
+    }
+    
+    .green{
+        color: $green;
+    }
+}
+
+
+.bordermedzipretekmi {
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+    background: #3d3d3d;
+    margin: 3rem auto;
+}
+
+
+/*footer*/
+footer{
+    height: 7rem;
+    width: 100%;
+    position: relative;
+    background: #3d3d3d;
+    bottom: 0;
+}
+
+.socialicons{
+    ul{
+        display: flex;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    li{
+       margin: 0 1rem;
+       text-align:center;
+    }
+    
+     i{
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.7);
+        transition: .2s;
+
+        &:hover{
+            color: #fff;
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);            
+        }
+    }
+}
+
+
+
+#myBtn {
+    position: relative;
+    bottom: 500rem;
+}
+
+@media screen and (max-width: 767px){
+    
+    .fotkapodheader{
+        background: url(/img/fotka2mobil2.JPG)no-repeat ;
+        height: 100vh;
+        background-size: cover;
+        z-index: 1;
+
+        .fa-angle-double-down{
+            color: $bodycolor;
+            font-size: 2.5rem;
+            position: absolute;
+            bottom: 25px;
+            animation: animate 2s 5;     
+        } 
+           
+        h1{
+           text-align: center;
+           font-size: 2.2rem;
+       }
+    }
+
+article{
+    h1{
+        font-size: 1.6rem;
+        }
+        
+    h3{
+        font-size: 1.4rem;
+    }
+        
+    p{
+        font-size: 1rem;
+    }     
+  }  
+
+  .trat {
+
+    margin: 2rem 0;
+
+    h3{
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    p{
+        text-align: justify;
+    }
+
+    img{
+        display: none;
+    }
+
+}   
+}
+
+@media screen and (min-width: 1024px){
+
+    .bluebold{
+        font-size: 1.3rem;
+    }
+
+    .fotkapodheader h1{
+        position: relative;
+        bottom: 5%;
+        width: 90%;
+        font-size: 4.5rem;
+    }
+
+    article{
+        width: 80%;
+        margin: 4rem auto 8rem auto;
+    }
+
+    footer{
+        height: 10rem;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+    }
+
+    .socialicons ul{
+        display: flex;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .socialicons li{
+        margin: 0 2.5rem;
+    }
+
+    .socialicons i{
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .socialicons i:hover{
+        color: #fff;
+    }
+
+    #myBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 30px; /* Place the button at the bottom of the page */
+        right: 50px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        color: white; /* Text color */
+        opacity: 0.6;
+        background: transparent;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 10px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+      }
+      
+      #myBtn:hover {
+
+        opacity: 1;
+      }
+}
+
+@media screen and (min-width: 1440px){
+    .fotkapodheader h1{
+        width: 80%;
+        font-size: 6rem;
+    }
+
+    article{
+        width: 70%;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+
+    .socialicons li{
+        margin: 0 2.5rem;
+    }
+
+    .fotkapodheader{
+        background-size: cover;
+    }
+
+    .fotkapodheader h1{
+        font-size: 3.5rem;
+    }
+
+}
+
+@media screen and (max-width: 340px){
+    .fotkapodheader h1{
+        font-size: 2rem;
+    }
+
+    .fotkapodheader{
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+}

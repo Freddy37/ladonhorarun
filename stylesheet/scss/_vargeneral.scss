@@ -1,0 +1,46 @@
+// COLORS
+$bodycolor: #fff;
+$green: #238823;
+$basictext: #5c5c5c;
+$boldtext: rgba(0,0,0,.9);
+$imageshadow: 2px 2px 5px 0px rgba(170, 170, 170, 0.753);
+$linkshadow: -1px -1px 2px 0px rgba(116, 81, 81, 0.753), 1px 1px 2px 0px rgba(116, 81, 81, 0.753);
+$redpath: #D2222D;
+$yellowpath: #FFDD00;
+$bluepath:  #1E3EC7;
+
+//FONTS
+$mainfont: 'Bree Serif', serif;
+
+/*BASIC*/
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: $mainfont;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h3,p{
+    font-family: $mainfont;
+}
+
+html,body{
+    background-color: $bodycolor;
+    scroll-behavior: smooth;
+}
+
+input, textarea{
+    font-family: $mainfont;
+}
+

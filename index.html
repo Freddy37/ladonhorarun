@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156021206-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-156021206-1');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Ľadonhora RUN</title>
+
+    <!-- ICON IN TITLE BAR  -->
+    <link rel="shortcut icon" type="image/x-icon" href="/logoheader.png">
+
+
+    <!--Styling-->
+    <link rel="stylesheet" href="stylesheet/css/reset.css">
+    <link rel="stylesheet" href="stylesheet/css/style.css?v=2">
+
+    <!-- jQuery, ScrollReveal -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap&subset=latin-ext" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+
+            <nav class="nav-bar">
+                <div class="nav-brand">
+                    <a href="#">
+                            <img src="/logoheader.png" alt="logo" >
+                    </a>
+                </div>
+
+                <!-- ICONS IN NAVBAR FOR MOBILES -->
+                <div class="menu-icons open">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            <ul class="nav-list">
+
+                <div class="menu-icons close" >
+                    <i class="fas fa-times"></i>
+                </div>
+                
+                <!-- HYPERLINKS TO OTHER PAGES -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >Domov</a>
+                    </li>
+                <li class="nav-item">
+                    <a href="/pretek.html" class="nav-link" >Pretek</a>
+                    </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link disabled">Registrácia</a>
+                    </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link disabled">Fotogaléria</a>
+                    </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link disabled">Výsledky</a>
+                    </li>
+                <li class="nav-item" id="#contact">
+                    <a href="#contact-section" class="nav-link">Kontakt</a>
+                </li>
+
+            </ul>
+            </nav>
+        <!-- LINE SHOWING UP WHILE SCROLLING -->
+        <div class="scroll-line"></div>
+    </header>
+
+<!-- LANDING PAGE WITH WALLPAPER -->
+    <main class="landingpage" id="landingpage">
+        <div class="pozadie">
+            <h1>Ľadonhora <span>RUN</span></h1>
+
+                <div class="infopodtitle">
+                    <p>Sobota 25.04.2020</p>
+                    <p>REGISTRÁCIA ČOSKORO</p>
+                    <p>SkyRace, 22km / 1300+  Malý pretek 11km / 400+</p>
+                </div>
+
+                <div class="landingpagelinks"> 
+                    <a href="#pretek" class="info">Info</a>
+                    <a href="#contact-section">Kontakt</a>
+                </div>
+
+            <div class="movingarrow">
+                <a href="#pretek"><i class="fas fa-angle-double-down"></i></a>
+            </div>
+        </div>
+    </main>
+
+<!-- FIRST SECTION ABOUT RACE -->
+    <section class="pretek" id="pretek">
+        <div class="textpretek">
+            <h3>Pretek</h3>
+            <p class="firstp">Staň sa súčasťou nultého ročníka Trailovej bežeckej súťaže,
+                 odohrávajúcej sa v jedinečnej prírode Kysuckej vrchoviny
+                 s výhľadmi na Malú Fatru. </p>
+            <p><span>1. SkyRace</span> s dĺžkou <span>22km</span> a kumulovaným prevýšením <span>1300+ m</span> prechádzajúci cez 5 rôznych obcí a miest,
+                 ktorý je určený pre skúsenejších bežcov ale vďaka menšej technickej náročnosti aj ako dobrá prvá skúsenosť s typom takéhoto preteku.</p> <!--skusit spravit OL z toho-->
+            <p><span>2. Malý Pretek</span> s dĺžkou <span>11km</span> a kumulovaným prevýšením <span>400+ m</span> určený pre každého, kto obľubuje horský beh a chce zažiť pravú bežeckú atmosféru .</p>
+            <a href="/pretek.html" class="pretekylink">Zobraziť viac</a>
+        </div>
+
+        <div class="obrazokpretek">
+
+        </div>
+    </section>
+
+<!-- TENKY BANNER KYM NENI REGISTRACIA  -->
+    <section class="registraciacoskoro">
+        <h1>Registrácia čoskoro</h1>
+    </section>
+
+<!-- SECTION CONTACT -->
+    <section class="contact-section" id="contact-section">
+        <h1>Máte otázky? <i class="fas fa-envelope"></i></h1>
+        <div class="border"></div>
+
+
+        <!-- CONTACT FORM -->
+        <form class="contact-form" action="https://formspree.io/xrgbvgnr" method="POST" id="Form">
+            <input type="text" name="name"  class="contact-form-text" placeholder="Meno">
+            <input type="email" name="_replyto" id="email" class="contact-form-text" placeholder="Email" required>
+            <textarea id="message" name="message" class="contact-form-text" placeholder="Správa" required></textarea>
+            <input type="submit"  name="submit"  class="contact-form-btn" value="Odoslať">
+        </form>
+        <button onclick="topFunction()" id="myBtn" ><i class="fas fa-angle-double-up fa-2x"></i></button>
+
+        <!-- LINK TO SOCIAL MEDIAS -->
+        <div class="socialmedias">
+            <ul>
+                <li><a href="tel:+421919047683" ><i class="fab fa-whatsapp socialicon"></a></i></li>
+                <li><a href="https://www.instagram.com/ladonhorarun/" target="blank" ><i class="fab fa-instagram socialicon"></a></i></li>
+                <li><a href="https://www.facebook.com/%C4%BDadonhora-Run-102185011230722/" ><i class="fab fa-facebook socialicon"></a></i></li>
+            </ul>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="mainfooter">
+            <i class="fas fa-phone"></i><p>  + 421 919 047 683</p><br>
+            <i class="fas fa-envelope"></i> <p>info@ladonhorarun.sk</p><br>
+
+            <p>Foto: Dušan Šrenkel</p>
+        </footer>
+    </section>
+
+<!-- smooth scroll -->
+<script src="/scripts/smoothScroll.js"></script>
+<!-- other scripts -->
+<script src="/scripts/totopbutton.js"></script>
+<script src="/scripts/script.js"></script>
+
+</body>
+</html>
