@@ -7,12 +7,17 @@
 
 .pozadie{
     background: url(/img/freestockphotos-44901565676457ysug51ovg6.jpg) no-repeat center center fixed;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     background-size: cover;
     height: 100vh;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
 
 }
 
@@ -49,11 +54,13 @@
 
         a{
             z-index: 2;
-            align-items: center;
+            -webkit-box-align: center;
+                    align-items: center;
             color: $basictext;
             padding: 0.625rem 1.25rem;
             margin: 1rem 1rem;
             background-color: rgba(255, 255, 255, 0.65);
+            -webkit-transition: 0.2s;
             transition: 0.2s;
             text-shadow: 0 1px 1px lighten($basictext, 30%);
             
@@ -68,12 +75,16 @@
 
 
 .movingarrow{
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
 
         a{
+            display:-webkit-box;
             display:flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                    justify-content: center;
         }
         
         i{
@@ -81,16 +92,33 @@
             font-size: 2.5rem;
             position: absolute;
             bottom: 30px;
-            animation: animate 2s 5;
+            -webkit-animation: animate 2s 5;
+                    animation: animate 2s 5;
             
         }
+}
+
+
+@-webkit-keyframes animate {
+    0%{
+        opacity: 0;
+        -webkit-transform: translate(0, -40px);
+                transform: translate(0, -40px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 
 @keyframes animate {
     0%{
         opacity: 0;
-        transform: translate(0, -40px);
+        -webkit-transform: translate(0, -40px);
+                transform: translate(0, -40px);
     }
     50%{
         opacity: 1;
@@ -103,10 +131,15 @@
 /* SEKCIA 1. PRETEKY*/
 
 .pretek{
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     margin: 3rem 0;
 
 }
@@ -116,8 +149,6 @@
     width: 350px;
     height: auto;
     margin: 3rem 0;
-    -webkit-box-shadow: $imageshadow;
-    -moz-box-shadow: $imageshadow;
     box-shadow: $imageshadow;
 }
 
@@ -151,6 +182,7 @@
     font-size: 1.1rem;
     box-shadow: $linkshadow;
     position: absolute;
+    -webkit-transition: .2s;
     transition: .2s;
 
     &:hover,
@@ -167,9 +199,12 @@
 .registraciacoskoro{
     height: 12vh;
     color: $bodycolor;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     background:lighten(#3d3d3d, 18%);
 }
 
@@ -178,6 +213,7 @@
 .contact-section {
     padding: 2.5rem 0;
     /* background: url(/img/kontakt.jpg) center center no-repeat fixed; */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.15)), to(rgba(0,0,0,0.15))), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
     background-blend-mode: multiply,multiply;
 
@@ -220,6 +256,7 @@
         padding: 1.25rem 2.5rem;
         outline: none;
         color: $basictext;
+        -webkit-transition: 0.5s;
         transition: 0.5s;
         font-size: 1.1rem;
 
@@ -235,6 +272,7 @@
         padding: 0.75rem 3.125rem;
         border-radius: 20px;
         cursor: pointer;
+        -webkit-transition: 0.2s;
         transition: 0.2s;
         font-size: 1.125rem;
         -webkit-appearance: none;
@@ -285,7 +323,6 @@ textarea.contact-form-text{
 	z-index: 1;
     color: #fff;
     -webkit-transition: box-shadow 0.2s;
-	-moz-transition: box-shadow 0.2s;
     transition: box-shadow 0.2s;
     
     &::after {
@@ -294,17 +331,17 @@ textarea.contact-form-text{
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        content: '';
-        -webkit-box-sizing: content-box; 
-        -moz-box-sizing: content-box; 
+        content: ''; 
         box-sizing: content-box;
         top: 0;
         left: 0;
         padding: 0;
         box-shadow: 0 0 0 3px #fff;
         -webkit-transition: -webkit-transform 0.6s, opacity 0.6s;
-        -moz-transition: -moz-transform 0.6s, opacity 0.6s;
+        -webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+        transition: opacity 0.6s, -webkit-transform 0.6s;
         transition: transform 0.6s, opacity 0.6s;
+        transition: transform 0.6s, opacity 0.6s, -webkit-transform 0.6s;
     }
     
     &::before {
@@ -324,6 +361,8 @@ textarea.contact-form-text{
 
 /*footer*/
 footer{
+width:-webkit-max-content;
+width:-moz-max-content;
 width:max-content;
 margin: 0 auto;
 padding-bottom: 1.2rem ;

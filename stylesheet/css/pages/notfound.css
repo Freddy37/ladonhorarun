@@ -27,10 +27,15 @@ h1, h3, p {
 
 .pozadie {
   background: url(/img/freestockphotos-44901565676457ysug51ovg6.jpg) no-repeat center center fixed;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
   height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 }
 
@@ -75,8 +80,8 @@ h1, h3, p {
 .pozadie a:hover {
   opacity: 1;
   -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
   transform: scale(1.1);
+  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
 

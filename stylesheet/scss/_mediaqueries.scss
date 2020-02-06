@@ -17,7 +17,8 @@
     font-size: 2.5rem;
     position: absolute;
     bottom: 25px;
-    animation: animate 2s 5;   
+    -webkit-animation: animate 2s 5;
+            animation: animate 2s 5;   
 }    
 
 .pozadie{
@@ -30,8 +31,6 @@ z-index: 1;
 
 .obrazokpretek{
     width: 100%;
-    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
 }
 
@@ -136,7 +135,9 @@ z-index: 1;
     
 
     .pretek{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
         margin: 6rem 0;
     }
 
@@ -191,9 +192,13 @@ z-index: 1;
     }
 
     .pretek{
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
+        -webkit-box-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+                align-items: center;
         margin: 3rem 0;
         min-height: 35rem;
     }
@@ -253,14 +258,13 @@ z-index: 1;
 
       .socialicon:hover::after {
         -webkit-transform: scale(0.85);
-        -moz-transform: scale(0.85);
-        -ms-transform: scale(0.85);
         transform: scale(0.85);
         opacity: 0.5;
     }
     
     .socialicon:hover {
         box-shadow: 0 0 0 10px rgba(255,255,255,1);
+        background-image: -webkit-gradient(linear, left bottom, left top, from(#0fd850), to(#f9f047));
         background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
         color: $bodycolor;
     }
@@ -270,6 +274,7 @@ z-index: 1;
     }
     
     .fa-facebook:hover {
+        background-image: -webkit-gradient(linear, left bottom, left top, from(#1e3c72), color-stop(1%, #1e3c72), to(#2a5298));
         background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     }
     
